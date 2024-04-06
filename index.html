@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&amp;family=Roboto:wght@500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="boxcustom">
+            <div class="container-left">
+                <div class="left">
+                    <i class="fa fa-map-marker-alt text-primary me-2 icon"></i><span>123 Street, New York, USA</span>
+                </div>
+                <div class="right">
+                    <i class="far fa-clock text-primary me-2 icon"></i> <span>Mon - Fri : 09.00 AM - 09.00 PM</span>
+                </div>
+            </div>
+            <div class="container-right">
+                <div class="left">
+                    <i class="bi bi-telephone-fill icon"></i><span>+012 345 6789</span>
+                </div>
+                <div class="right">
+                    <i class="fab fa-facebook-f icon"></i>
+                    <i class="fab fa-twitter icon"></i>
+                    <i class="fab fa-linkedin icon"></i>
+                    <i class="fab fa-instagram icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="containercustom">
+            <div class="left">
+                WooDY
+            </div>
+            
+            <div class="right">
+                <!-- Hamburger Menü -->
+                <div class="hamburger-menu hamburger-open">
+                    <div class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <!-- Menü öğeleri -->
+                <div class="boxcustom">
+                    <div > <a href="">Home</a>
+                    </div>
+                    <div><a href="">About</a></div>
+                    <div><a href="">Service</a></div>
+                    <div><a href="">Project</a></div>
+                    <div class="drop-down"><a href="">Pages</a>
+                    </div>
+                    <div><a href="">Contact</a></div>
+                    <div><a href="">Get A Quoete <i class="fa fa-arrow-right icon"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="section1">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide1"><img src="./assets/img/carousel-1.jpg" alt=""><div class="overlay"><div class="box"><h5>WELCOME TO WOODY</h5>
+                <h1>Best Carpenter & Craftsman Services</h1>
+                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Quos nam dolore quibusdam eaque maxime eos.</p></div>
+                </div></div>
+              
+              <div class="swiper-slide slide2"><img src="./assets/img/carousel-2.jpg" alt=""><div class="overlay"><div class="box"><h5>WELCOME TO WOODY</h5>
+                <h1>Best Carpenter & Craftsman Services</h1>
+                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Quos nam dolore quibusdam eaque maxime eos.</p></div>
+                </div></div>
+              <div class="swiper-slide slide3"><img src="./assets/img/carousel-3.jpg" alt=""><div class="overlay"><div class="box"><h5>WELCOME TO WOODY</h5>
+                <h1>Best Carpenter & Craftsman Services</h1>
+                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.Quos nam dolore quibusdam eaque maxime eos.</p></div>
+                </div></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </div>
+    <div class="top">
+      <i class="bi bi-arrow-up"></i>
+    </div>
+    <div class="section2">
+      <div class="up">
+        <div class="box"><i class="fa fa-user-check fa-2x text-primary"></i><p>Creative Designers</p></div>
+        <div class="box"><i class="fa fa-check fa-2x text-primary"></i><p>Quality Products</p></div>
+        <div class="box"><i class="fa fa-drafting-compass fa-2x text-primary"></i><p>Free Consultation</p></div>
+        <div class="box"><i class="fa fa-headphones fa-2x text-primary"></i><p>Customer Support</p></div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          speed: 2000,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          on: {
+            slideChangeTransitionStart: function() {
+              document.querySelector(".swiper-wrapper").classList.add("transitioning");
+            },
+            slideChangeTransitionEnd: function() {
+              document.querySelector(".swiper-wrapper").classList.remove("transitioning");
+            }
+          }
+        });
+    
+        // Hamburger Menü İşlevselliği
+        // Hamburger Menü İşlevselliği
+  document.querySelector('.hamburger-icon').addEventListener('click', function () {
+  document.querySelector('.hamburger-menu').classList.toggle('hamburger-open');
+  document.querySelectorAll('.boxcustom')[0].classList.toggle('hamburger-open');
+});
+
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
